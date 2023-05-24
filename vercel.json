@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "resumeuploaderdjangoapi/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "resumeuploaderdjangoapi/wsgi.py"
+    }
+  ]
+}
