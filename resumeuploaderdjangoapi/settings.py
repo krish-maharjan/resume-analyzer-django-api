@@ -138,7 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # In order to keep all user uploaded files inside media folder of app
 import os
 MEDIA_ROOT= os.path.join(BASE_DIR, "media")
-MEDIA_ROOT = BASE_DIR / 'media'
 
 
 REST_FRAMEWORK = {
