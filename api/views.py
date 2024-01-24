@@ -146,6 +146,7 @@ class ProfileView(APIView):
         for file in file_list:
             if file.name.endswith('.pdf'):
                 with file.open(mode='rb') as f:
+                    # print(f)
                     pdf_reader = PyPDF2.PdfReader(f)
                     num_pages = pdf_reader.getNumPages()
                     text = ''
@@ -154,16 +155,17 @@ class ProfileView(APIView):
                         text += page.extractText()
             elif file.name.endswith('.docx'):
                 with file.open(mode='rb') as f:
-                    print(f)
+                    # print(f)
                     # print(f.read())
                     
                     in_memory_file = BytesIO(f.read())
-                    print(in_memory_file)
+                    # print(in_memory_file)
                     doc = Document(in_memory_file)
                     fullText = []
                     for para in doc.paragraphs:
+                        # print('doc', para.text)
                         fullText.append(para.text)
-                    text = '\\n'.join(fullText)
+                    text = '\n'.join(fullText)
             else:
                 continue
 
@@ -184,6 +186,7 @@ class ProfileView(APIView):
 
             # Analyzing words
             for i in keycheck:
+                # print(analysis_list)
                 for word in analysis_list:
                     word = str(word)
                     word = word.lower()
@@ -194,6 +197,7 @@ class ProfileView(APIView):
 
                     # checking if the text in the words have keywords
                     if i == word:
+                        # print(i)
                         result.append(i)
             result = list(set(result))
 
