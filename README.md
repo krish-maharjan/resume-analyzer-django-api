@@ -27,3 +27,5 @@ The request looks somthing like this:
 keywords must be comma seperated, rdoc is where you provide your files which can range from 1 to as many as you want.  
 
 Now you're good to go and can use it in your project or with https://github.com/krishmzn/resume-analyzer-nextjs
+
+[resume-analyzer-postman.webm](https://github.com/krishmzn/resume-analyzer-django-api/assets/99157652/70c91174-ed1f-483d-98d6-e3b029b93060)
