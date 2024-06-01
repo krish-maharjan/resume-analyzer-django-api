@@ -1,4 +1,5 @@
 ﻿# resume-analyzer-api
+[Live Deployed Site](https://krish-resume-analyzer.vercel.app/)
 
 ## Getting started
 
